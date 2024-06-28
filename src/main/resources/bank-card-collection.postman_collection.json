@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "aadaff9c-17d8-4e2a-82b5-ad58b6f6e487",
+		"name": "bank-card-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Card-APIs",
+			"item": [
+				{
+					"name": "CardList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8040/api/v1/cards",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"api",
+								"v1",
+								"cards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CardAdd",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cardNumber\": \"9555214523695124\",\r\n\t\"cardName\": \"Ahorro\",\r\n\t\"cvv\": \"122\",\r\n\t\"year\": \"2026\",\r\n\t\"month\": \"10\",\r\n\t\"isExpired\": false,\r\n\t\"isActive\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8040/api/v1/cards",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"api",
+								"v1",
+								"cards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CardUpd",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": \"61763ca95bfe2165e4b3c880\",\r\n        \"accountId\": \"61763f6ff78f2c109804a44e\",\r\n        \"cardNumber\": \"9555214523695555\",\r\n        \"cardName\": \"Visa\",\r\n        \"cvv\": \"122\",\r\n        \"year\": \"2026\",\r\n        \"month\": \"10\",\r\n        \"active\": false,\r\n        \"expired\": false\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8040/api/v1/cards",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"api",
+								"v1",
+								"cards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CardDel",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8040/api/v1/cards/61763ca95bfe2165e4b3c880",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"api",
+								"v1",
+								"cards",
+								"61763ca95bfe2165e4b3c880"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CardSearchByAccountId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8040/api/v1/cards/61763f6ff78f2c109804a44e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"api",
+								"v1",
+								"cards",
+								"61763f6ff78f2c109804a44e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
